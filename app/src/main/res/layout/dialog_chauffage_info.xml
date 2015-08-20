@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Type -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="3dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Type : "
+            android:layout_gravity="center_vertical"/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinChauffageType"/>
+
+    </LinearLayout>
+
+    <!-- Number -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="3dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Nombre : "
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etChauffageNumber"
+            android:layout_gravity="center_horizontal"
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
+
+
+
+    <!-- Ok/ Cancel -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="3dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Valider"
+            android:id="@+id/btnChauffageOK"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Annuler"
+            android:id="@+id/btnChauffageCANCEL"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="40dp" />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

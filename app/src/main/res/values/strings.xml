@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ramono</string>
+    <string name="title_activity_maps">Client Map</string>
+    <string name="Conduit_Types">Bois;Gaz;Mazout</string>
+    <string name="Chauffage_Types">Poele a bois;Insert;Cheminée ouverte;Poele à mazout;Chaudière mazout;Fourneau;System CESA</string>
+
+</resources>

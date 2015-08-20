@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:title="Adresse personnelle"
+        android:key="adresse"
+        android:summary="Veuillez saisir votre adresse."></EditTextPreference>
+    <EditTextPreference android:title="Types de conduit"
+        android:key="conduits"
+        android:defaultValue="Bois;Gaz;Mazout"
+        android:summary="Listez les types de conduits en les séparant par des ';'"></EditTextPreference>
+    <EditTextPreference android:title="Types de chauffage"
+        android:key="chauffages"
+        android:defaultValue="Poele a bois;Insert;Cheminée ouverte;Poele à mazout;Chaudière mazout;Fourneau;System CESA"
+        android:summary="Listez les types de chauffage en les séparant par des ';'"></EditTextPreference>
+</PreferenceScreen>

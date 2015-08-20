@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/client_add_menu_item"
+        android:title="Ajouter un client">
+    </item>
+    <!--<item-->
+        <!--android:id="@+id/locate_all_menu_item"-->
+        <!--android:title="Localiser tous">-->
+    <!--</item>-->
+</menu>

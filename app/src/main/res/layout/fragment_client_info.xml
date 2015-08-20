@@ -1,0 +1,233 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.TriVe.Apps.Ramono.ClientInfoFragment">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enregistrer données."
+        android:id="@+id/btnSaveNote"
+        android:layout_gravity="center_horizontal"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/layout_border"
+                android:padding="10dip" >
+
+                <!-- Name -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Nom : "
+                        android:id="@+id/tvClientName"
+                        android:layout_gravity="center_vertical"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/etClientName"
+                        android:layout_gravity="center"
+                        android:editable="false"
+                        android:background="@null"/>
+                </LinearLayout>
+
+                <!-- Tel -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Tel : "
+                        android:id="@+id/tvClientTel"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinTel"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <!-- Adress -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Adresse : "
+                        android:id="@+id/tvClientAdresse"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinAddress"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <!-- Email -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="E-Mail : "
+                        android:id="@+id/tvClientEmail" />
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinEMail"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--Conduits-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/layout_border"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Conduits: "
+                    android:id="@+id/tvConduits" />
+                <com.TriVe.Apps.Ramono.CustomViews.NestedListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lvConduits"
+                    android:listSelector="#ff8895ff"/>
+
+            </LinearLayout>
+
+            <!-- Elements tuyau de raccordement -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/layout_border"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Elements: "
+                    android:id="@+id/tvElemTuyau"
+                    android:layout_gravity="center_vertical"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/etElemTuyau"
+                    android:layout_gravity="center"
+                    android:inputType="number"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+
+            <!--Chauffages-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/layout_border"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Chauffages: "
+                    android:id="@+id/tvChauffages" />
+
+                <com.TriVe.Apps.Ramono.CustomViews.NestedListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lvChauffage"/>
+            </LinearLayout>
+
+
+            <!--Commentaires-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/layout_border"
+                android:padding="10dip">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Commentaires: "/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etComment"
+                    android:background="@null"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

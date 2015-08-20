@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/client_menu_item"
+          android:icon="@android:drawable/ic_menu_more"
+          android:title="Client" >
+        <!-- "client" submenu -->
+        <menu>
+            <item
+                android:id="@+id/client_call_menu_item"
+                android:icon="@android:drawable/ic_menu_call"
+                android:title="Appeler client">
+            </item>
+            <item
+                android:id="@+id/client_edit_menu_item"
+                android:icon="@android:drawable/ic_menu_edit"
+                android:title="Modifier client">
+            </item>
+            <item
+                android:id="@+id/client_locate_menu_item"
+                android:icon="@android:drawable/ic_menu_compass"
+                android:title="Localiser client">
+            </item>
+            <item
+                android:id="@+id/invoice_client_menu_item"
+                android:title="Facturer client">
+            </item>
+        </menu>
+    </item>
+
+
+    <item android:id="@+id/conduit_menu_item"
+          android:icon="@android:drawable/ic_menu_more"
+          android:title="Conduit" >
+        <!-- "client" submenu -->
+        <menu>
+            <item
+                android:id="@+id/conduit_add_menu_item"
+                android:icon="@android:drawable/ic_menu_add"
+                android:title="Ajouter conduit">
+            </item>
+            <item
+                android:id="@+id/conduit_edit_menu_item"
+                android:icon="@android:drawable/ic_menu_edit"
+                android:title="Modifier conduit">
+            </item>
+            <item
+                android:id="@+id/conduit_remove_menu_item"
+                android:icon="@android:drawable/ic_menu_delete"
+                android:title="Supprimer conduit">
+            </item>
+            <item
+                android:id="@+id/conduit_MAJ_dates_menu_item"
+                android:title="Mettre à jour la date des conduits selectionnées.">
+            </item>
+        </menu>
+    </item>
+
+    <item android:id="@+id/chauffage_menu_item"
+          android:icon="@android:drawable/ic_menu_more"
+          android:title="Chauffage" >
+        <!-- "client" submenu -->
+        <menu>
+            <item
+                android:id="@+id/chauffage_add_menu_item"
+                android:icon="@android:drawable/ic_menu_add"
+                android:title="Ajouter chauffage">
+            </item>
+            <item
+                android:id="@+id/chauffage_edit_menu_item"
+                android:icon="@android:drawable/ic_menu_edit"
+                android:title="Modifier chauffage">
+            </item>
+            <item
+                android:id="@+id/chauffage_remove_menu_item"
+                android:icon="@android:drawable/ic_menu_delete"
+                android:title="Supprimer chauffage">
+            </item>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/client_appointment_menu_item"
+        android:title="Planifier RDV client">
+    </item>
+
+
+</menu>
