@@ -1,5 +1,11 @@
 package com.TriVe.Apps.mycontact.ContactAPI.objects;
 
+/**
+ * <b>Represent the contact address.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class Address
 {
 
@@ -16,7 +22,7 @@ public class Address
 
     public String getStringFromType()
     {
-        String AddressType = "";
+        String AddressType;
         switch(type) {
             case "0":
                 AddressType = label;

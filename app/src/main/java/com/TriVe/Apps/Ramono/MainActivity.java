@@ -19,7 +19,12 @@ import com.TriVe.Apps.mycontact.ContactAPI.objects.Contact;
 import java.util.ArrayList;
 import java.util.Collections;
 
-
+/**
+ * <b>Main activity of the project used to display action bar and fragments.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class MainActivity extends ActionBarActivity implements ClientListFragment.OnFragmentInteractionListener
 {
     private static final String TAG = "MainActivity";
@@ -58,11 +63,7 @@ public class MainActivity extends ActionBarActivity implements ClientListFragmen
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-//        if (!SharedPrefs.getBoolean(this, "IS_ICON_CREATED"))
-//        {
-//            addShortcut();
-//            SharedPrefs.savePref(this, "IS_ICON_CREATED", true);
-//        }
+        addShortcut();
     }
 
     @Override
@@ -89,9 +90,6 @@ public class MainActivity extends ActionBarActivity implements ClientListFragmen
     @Override
     public void onClientSelected()
     {
-//        if(getResources().getBoolean(R.bool.dual_pane))
-//            onClientSelectedTwoPane(id);
-//        else
         onClientSelectedOnePane();
         Datas.isNoteModified = false;
     }
@@ -169,7 +167,7 @@ public class MainActivity extends ActionBarActivity implements ClientListFragmen
     }
 
     /**
-     * menu "Quit " has been clicked, answer for confirmation.
+     * "Quit" menu has been clicked, answer for confirmation.
      */
     private void QuitDialog()
     {
@@ -203,20 +201,25 @@ public class MainActivity extends ActionBarActivity implements ClientListFragmen
         ad.show();
     }
 
+
     private void addShortcut() {
-        //Adding shortcut for MainActivity
-        //on Home screen
+
+        //Adding shortcut for MainActivity on Home screen
         Intent shortcutIntent = new Intent(getApplicationContext(), MainActivity.class);
 
         shortcutIntent.setAction(Intent.ACTION_MAIN);
+        shortcutIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        shortcutIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
         Intent addIntent = new Intent();
         addIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
-        addIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, "Ramonage");
+        addIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, "Ramono");
         addIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, Intent.ShortcutIconResource.fromContext(getApplicationContext(), R.drawable.ic_launcher));
+        addIntent.putExtra("duplicate", false);
 
         addIntent.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
         getApplicationContext().sendBroadcast(addIntent);
+
     }
 
 }

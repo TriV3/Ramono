@@ -10,7 +10,12 @@ import android.util.Log;
 import com.TriVe.Apps.Ramono.Datas;
 import com.TriVe.Apps.mycontact.ContactAPI.objects.Contact;
 
-
+/**
+ * <b>Represent a Client.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class Client extends Contact implements Comparable
 {
     public static final String TAG = "ClientTAG";

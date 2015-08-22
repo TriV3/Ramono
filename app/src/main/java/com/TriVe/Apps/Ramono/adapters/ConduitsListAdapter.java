@@ -16,6 +16,12 @@ import com.TriVe.Apps.Ramono.Ramonage.Conduit;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <b>Adapter for the Conduits ListView.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class ConduitsListAdapter extends BaseAdapter
 {
     List<Conduit> conduits;

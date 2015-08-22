@@ -13,6 +13,12 @@ import com.TriVe.Apps.mycontact.ContactAPI.objects.Email;
 
 import java.util.List;
 
+/**
+ * <b>Adapter for the Email Spinner.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class EmailSpinnerAdapter extends ArrayAdapter<Email>
 {
     List<Email> Emails;

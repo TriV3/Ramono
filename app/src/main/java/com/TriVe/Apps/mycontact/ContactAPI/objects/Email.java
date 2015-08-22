@@ -1,5 +1,12 @@
 package com.TriVe.Apps.mycontact.ContactAPI.objects;
 
+
+/**
+ * <b>Represent a contact Email.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class Email {
     private String address;
     private String type;

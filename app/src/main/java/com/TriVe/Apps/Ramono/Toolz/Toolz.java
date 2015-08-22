@@ -4,6 +4,12 @@ package com.TriVe.Apps.Ramono.Toolz;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <b>Toolz  Compilation.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class Toolz
 {
 

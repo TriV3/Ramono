@@ -3,6 +3,12 @@ package com.TriVe.Apps.mycontact.ContactAPI.objects;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <b>Represent a device contact.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class Contact
 {
     private String id = "-1";

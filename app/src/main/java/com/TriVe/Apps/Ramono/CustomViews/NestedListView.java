@@ -9,6 +9,14 @@ import android.widget.AbsListView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+/**
+ * <b>Custom ListView used for "Conduit" list and "Chauffage" list.</b>
+ *
+ * <p>This listview was created because the original listview had scrolling problems.</p>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class NestedListView extends ListView implements View.OnTouchListener, AbsListView.OnScrollListener
 {
 

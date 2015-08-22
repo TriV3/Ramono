@@ -6,6 +6,11 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 
+/**
+ * <b>Used for location.</b>
+ *
+ * <p>http://gabesechansoftware.com/location-tracking/</p>
+ */
 public class ProviderLocationTracker implements LocationListener, LocationTracker {
 
     // The minimum distance to change Updates in meters

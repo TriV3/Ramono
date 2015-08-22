@@ -18,6 +18,12 @@ import com.TriVe.Apps.Ramono.Ramonage.Client;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <b>Adapter for the Client ListView.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class ClientListAdapter extends BaseAdapter implements Filterable
 {
     public static final String TAG = "ClientListAdapterTAG";

@@ -6,7 +6,12 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
-
+/**
+ * <b>Activity used to manage preferences.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class UserSettingActivity extends Activity
 {
     @Override

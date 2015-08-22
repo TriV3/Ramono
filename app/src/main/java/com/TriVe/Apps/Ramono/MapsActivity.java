@@ -36,6 +36,12 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <b>Maps activity used to locate clients on map.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class MapsActivity extends FragmentActivity implements GoogleMap.OnMapLoadedCallback
 {
     public static final String TAG = "MapsActivityTAG";

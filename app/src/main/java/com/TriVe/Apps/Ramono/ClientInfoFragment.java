@@ -54,7 +54,12 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
-
+/**
+ * <b>Fragment containing contact information.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class ClientInfoFragment extends Fragment implements AdapterView.OnItemClickListener, View.OnClickListener, TextWatcher
 {
     public static final String TAG = "ClientInfoFragmentTAG";
@@ -259,7 +264,7 @@ public class ClientInfoFragment extends Fragment implements AdapterView.OnItemCl
                 return true;
             // Edit Client:
             case R.id.client_edit_menu_item:
-                Log.i(ClientInfoFragment.TAG + " : onOptionsItemSelected", "Client Name = " + c.getDisplayName() + ", Client ID = " + c.getId());
+                Log.i("onOptionsItemSelected", "Client Name = " + c.getDisplayName() + ", Client ID = " + c.getId());
                 intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(uri);
                 intent.putExtra("finishActivityOnSaveCompleted", true);
@@ -437,10 +442,10 @@ public class ClientInfoFragment extends Fragment implements AdapterView.OnItemCl
     public void displayContact()
     {
         clearDatas();
-        Log.i(ClientInfoFragment.TAG + " : displayContact start", "Client Name = " + Datas.Selectedclient.getDisplayName() + ", Client ID = " + Datas.Selectedclient.getId());
+        Log.i("displayContact start", "Client Name = " + Datas.Selectedclient.getDisplayName() + ", Client ID = " + Datas.Selectedclient.getId());
         Contact con = new ContactAPI(context).GetContactInfoFromID(Datas.Selectedclient.getId());
         Datas.Selectedclient = new Client(con);
-        Log.i(ClientInfoFragment.TAG + " : displayContact middle", "Client Name = " + Datas.Selectedclient.getDisplayName() + ", Client ID = " + Datas.Selectedclient.getId());
+        Log.i("  displayContact middle", "Client Name = " + Datas.Selectedclient.getDisplayName() + ", Client ID = " + Datas.Selectedclient.getId());
         Client c = Datas.Selectedclient;
 
         etName.setText(c.getDisplayName());
@@ -470,7 +475,7 @@ public class ClientInfoFragment extends Fragment implements AdapterView.OnItemCl
             NotesToData(c.getNotes());
         }
 
-        Log.i(ClientInfoFragment.TAG + " : displayContact end", "Client Name = " + Datas.Selectedclient.getDisplayName() + ", Client ID = " + Datas.Selectedclient.getId());
+        Log.i("displayContact end", "Client Name = " + Datas.Selectedclient.getDisplayName() + ", Client ID = " + Datas.Selectedclient.getId());
     }
 
     private void NotesToData(List<String> Notes)

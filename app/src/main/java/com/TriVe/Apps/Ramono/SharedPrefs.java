@@ -5,7 +5,12 @@ import android.content.SharedPreferences;
 
 import java.util.Set;
 
-//SharedPreferences manager class
+/**
+ * <b>SharedPreferences manager class.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class SharedPrefs {
 
     //SharedPreferences file name

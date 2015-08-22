@@ -1,5 +1,11 @@
 package com.TriVe.Apps.mycontact.ContactAPI.objects;
 
+/**
+ * <b>Represent a contact IM.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class IM {
     private String name;
     private String type;

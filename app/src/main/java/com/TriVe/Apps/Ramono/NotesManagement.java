@@ -11,6 +11,12 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * <b>API used to manage contact notes.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class NotesManagement
 {
     public static final String TAG = "NotesManagementTAG";

@@ -13,6 +13,12 @@ import com.TriVe.Apps.mycontact.ContactAPI.objects.Phone;
 
 import java.util.List;
 
+/**
+ * <b>Adapter for the Phone Spinner.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class TelSpinnerAdapter extends ArrayAdapter<Phone>
 {
     List<Phone> Phones;

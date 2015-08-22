@@ -16,7 +16,12 @@ import com.TriVe.Apps.Ramono.Ramonage.Chauffage;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * <b>Adapter for the Chauffage ListView.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class ChauffagesListAdapter extends BaseAdapter
 {
     List<Chauffage> chauffages;

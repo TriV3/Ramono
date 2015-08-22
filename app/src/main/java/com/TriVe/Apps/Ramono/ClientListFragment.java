@@ -31,6 +31,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 
+/**
+ * <b>Fragment containing the contact list.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class ClientListFragment extends Fragment implements AdapterView.OnItemClickListener
 {
 

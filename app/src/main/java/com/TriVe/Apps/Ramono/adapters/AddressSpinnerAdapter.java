@@ -13,7 +13,12 @@ import com.TriVe.Apps.mycontact.ContactAPI.objects.Address;
 
 import java.util.List;
 
-
+/**
+ * <b>Adapter for the address spinner.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class AddressSpinnerAdapter extends ArrayAdapter<Address>
 {
     List<Address> Addresses;

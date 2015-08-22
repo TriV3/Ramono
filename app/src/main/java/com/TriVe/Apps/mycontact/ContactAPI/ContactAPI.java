@@ -5,24 +5,49 @@ import java.util.List;
 
 import com.TriVe.Apps.mycontact.ContactAPI.objects.*;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.database.Cursor;
+import android.os.Build;
 import android.provider.ContactsContract;
 import android.content.ContentResolver;
 
-public class ContactAPI {
 
-//    private Cursor cur;
+/**
+ * <b>Contact management API.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
+public class ContactAPI
+{
+    /**
+     * Used to query the device database
+     */
     private ContentResolver cr;
+
+    /**
+     * Needed by the ContentResolver
+     */
     private Context context;
 
-
+    /**
+     * ContactAPI constructor
+     * <p>
+     * Used to get the caller context used by the ContentResolver.
+     * </p>
+     * @param context Caller context
+     */
     public ContactAPI(Context context)
     {
         this.context = context;
     }
 
-
+    /**
+     * Create and return the contact list.
+     * @param context Caller context
+     * @return The contact list in the device
+     */
     public static List<Contact> newContactList(Context context)
     {
         ArrayList<Contact> contacts = new ArrayList<>();
@@ -44,9 +69,17 @@ public class ContactAPI {
                 contacts.add(c);
             }
         }
+
+        cur.close();
         return contacts;
     }
 
+    /**
+     * Get contact data  from contact id
+     * @param id Contact id
+     * @return The contact
+     */
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public Contact GetContactInfoFromID(String id)
     {
         String dbID;
@@ -75,11 +108,18 @@ public class ContactAPI {
                 }
             }
         }
-            return null;
+
+        cur.close();
+        return null;
     }
 
-
-    public List<Phone> getPhoneNumbers(String id) {
+    /**
+     * Get phone numbers from contact id
+     * @param id Contact id
+     * @return List of phone numbers
+     */
+    public List<Phone> getPhoneNumbers(String id)
+    {
         List<Phone> phones = new ArrayList<>();
 
         Cursor pCur = this.cr.query(
@@ -99,7 +139,11 @@ public class ContactAPI {
         return(phones);
     }
 
-
+    /**
+     * Get Email addresses from contact id
+     * @param id Contact id
+     * @return List of Email addresses
+     */
     public List<Email> getEmailAddresses(String id) {
         List<Email> emails = new ArrayList<>();
 
@@ -120,6 +164,11 @@ public class ContactAPI {
         return(emails);
     }
 
+    /**
+     * Get Notes from contact id
+     * @param id Contact id
+     * @return List of Notes Strings
+     */
     public List<String> getContactNotes(String id) {
         List<String> notes = new ArrayList<>();
         String where = ContactsContract.Data.CONTACT_ID + " = ? AND " + ContactsContract.Data.MIMETYPE + " = ?";
@@ -136,6 +185,11 @@ public class ContactAPI {
         return(notes);
     }
 
+    /**
+     * Get the postal addresses from contact id
+     * @param id Contact id
+     * @return List of addresses
+     */
     public List<Address> getContactAddresses(String id) {
         List<Address> addrList = new ArrayList<>();
 

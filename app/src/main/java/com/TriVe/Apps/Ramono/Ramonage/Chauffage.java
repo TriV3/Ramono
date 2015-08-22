@@ -1,7 +1,10 @@
 package com.TriVe.Apps.Ramono.Ramonage;
 
 /**
- * Created by Titou on 23/03/2015.
+ * <b>Represent a "Chauffage" object.</b>
+ *
+ * @author TriVe
+ * @version 1.0
  */
 public class Chauffage
 {

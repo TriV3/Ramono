@@ -4,6 +4,11 @@ import android.content.Context;
 import android.location.Location;
 import android.location.LocationManager;
 
+/**
+ * <b>Used for location.</b>
+ *
+ * <p>http://gabesechansoftware.com/location-tracking/</p>
+ */
 public class FallbackLocationTracker  implements LocationTracker, LocationTracker.LocationUpdateListener {
 
 

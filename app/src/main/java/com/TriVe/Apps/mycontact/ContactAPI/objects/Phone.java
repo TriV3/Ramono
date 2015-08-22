@@ -1,5 +1,11 @@
 package com.TriVe.Apps.mycontact.ContactAPI.objects;
 
+/**
+ * <b>Represent a contact phone number.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class Phone {
     private String number;
     private String type;

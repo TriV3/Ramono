@@ -1,5 +1,11 @@
 package com.TriVe.Apps.Ramono.Ramonage;
 
+/**
+ * <b>Represent a "Conduit" object.</b>
+ *
+ * @author TriVe
+ * @version 1.0
+ */
 public class Conduit
 {
     public String type = "";
